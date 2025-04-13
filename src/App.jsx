@@ -7,6 +7,7 @@ import Nav from './Navlist/Nav';
 import Login from './Main/Login';
 import Admin from './Main/Admin';
 import CartComponent from './Main/Cart'; 
+import Footer from './Components/Footer/Footer';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -57,6 +58,7 @@ function App() {
             element={<CartComponent cart={cart} handleRemoveFromCart={handleRemoveFromCart} />}
           />
         </Routes>
+       <Footer></Footer>
       </BrowserRouter>
     </div>
   );

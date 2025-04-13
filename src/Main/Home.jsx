@@ -20,7 +20,7 @@ const Home = ({ handleAddToCart }) => {
       <div className="px-4 md:px-8 lg:px-16">
         <div className="mb-4 text-center">
           <marquee className="text-lg font-bold text-red-500">
-            50% Discount Going On all the products!
+            20% Discount Going On all the products!
           </marquee>
         </div>
         <div className="flex flex-col md:flex-row gap-12">
@@ -67,12 +67,12 @@ const Home = ({ handleAddToCart }) => {
           <Card title="Laptop HP-cx-24" picture={First} price="70000" onAddToCart={handleAddToCart} />
         </div>
       </div>
-      <div className='flex items-center'>
+      <div className='md:flex items-center'>
         <img src={Hd1} alt="50% Discount" className="rounded-lg w-full max-w-8xl h-96 m-5" />
         <img src={Hd2} alt="50% Discount" className="rounded-lg w-full max-w-8xl h-96" />
       </div>
       <div className="px-0 md:px-0 lg:px-0">
-        <Footer />
+    
       </div>
     </div>
   );
