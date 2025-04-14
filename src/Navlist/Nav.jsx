@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';
 
-const Nav = () => {
+const Nav = ({count}) => {
   const location = useLocation();
   const [openbar, setOpenbar] = useState(false);
 
@@ -53,7 +53,9 @@ const Nav = () => {
               to="/cart"
               className={`flex items-center hover:text-gray-400 ${location.pathname === '/cart' ? 'text-red-500' : ''}`}
             >
-              <FaShoppingCart className="mr-2" /> Cart
+              <FaShoppingCart className="mr-2 absolute" /> 
+              <div className='bg-red-500 text-white rounded-lg  relative left-4 mr-5 h-5 w-5 flex justify-center items-center'>{count}</div>
+           
             </Link>
           </li>
           <li>

@@ -16,17 +16,21 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState([]);
+  const [count,setCount]=useState(0)
 
   const handleAddToCart = (product) => {
     
     setCart([...cart, product]);
     toast.success("Cart added Successfully");
+    setCount(count+1);
   };
 
   const handleRemoveFromCart = (productId) => {
     
     setCart(cart.filter((product) => product.id !== productId));
     toast.success("Cart removed Successfully");
+    setCount(count-1);
+
 
   };
 
@@ -41,7 +45,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Nav />
+        <Nav count={count}/>
         <Routes>
           <Route path="/" element={<Home handleAddToCart={handleAddToCart} />} />
           <Route path="/contact" element={<Contact />} />
