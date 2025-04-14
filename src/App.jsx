@@ -8,6 +8,10 @@ import Login from './Main/Login';
 import Admin from './Main/Admin';
 import CartComponent from './Main/Cart'; 
 import Footer from './Components/Footer/Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -16,13 +20,13 @@ function App() {
   const handleAddToCart = (product) => {
     
     setCart([...cart, product]);
-    alert("Cart added Successfully")
+    toast.success("Cart added Successfully");
   };
 
   const handleRemoveFromCart = (productId) => {
     
     setCart(cart.filter((product) => product.id !== productId));
-    alert("Cart removed Successfully")
+    toast.success("Cart removed Successfully");
 
   };
 
@@ -57,9 +61,12 @@ function App() {
             path="/cart"
             element={<CartComponent cart={cart} handleRemoveFromCart={handleRemoveFromCart} />}
           />
+           
         </Routes>
        <Footer></Footer>
+       <ToastContainer position="top-right" autoClose={2000} />
       </BrowserRouter>
+    
     </div>
   );
 }

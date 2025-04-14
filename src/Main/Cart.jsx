@@ -25,6 +25,7 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
                 </button>
               </div>
             ))}
+         
           </div>
 
           <div className='mt-5 text-center'>
