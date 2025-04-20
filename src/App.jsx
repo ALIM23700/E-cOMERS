@@ -10,7 +10,8 @@ import Footer from './Components/Footer/Footer';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Shop from './Main/Shop';
-import SignUp from './Main/SIGNUP.JSX';
+
+
 
 
 function App() {
@@ -49,7 +50,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp></SignUp>} />
          
           <Route
             path="/cart"

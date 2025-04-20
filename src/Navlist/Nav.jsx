@@ -66,14 +66,6 @@ const Nav = ({count}) => {
          
           </li>
           <li>
-          <Link
-              to="/signup"
-              className={`hover:text-gray-400 ${location.pathname === '/signup' ? 'text-red-500' : ''}`}
-            >
-              Sign Up
-            </Link>
-          </li>
-          <li>
             <Link
               to="/cart"
               className={`flex items-center hover:text-gray-400 ${location.pathname === '/cart' ? 'text-red-500' : ''}`}
