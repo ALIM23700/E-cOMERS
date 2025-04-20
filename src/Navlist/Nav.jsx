@@ -33,6 +33,14 @@ const Nav = ({count}) => {
             </Link>
           </li>
           <li>
+          <Link
+              to="/shop"
+              className={`hover:text-gray-400 ${location.pathname === '/shop' ? 'text-red-500' : ''}`}
+            >
+              Shop
+            </Link>
+            </li>
+          <li>
             <Link
               to="/about"
               className={`hover:text-gray-400 ${location.pathname === '/about' ? 'text-red-500' : ''}`}
@@ -50,6 +58,23 @@ const Nav = ({count}) => {
           </li>
           <li>
             <Link
+              to="/login"
+              className={`hover:text-gray-400 ${location.pathname === '/login' ? 'text-red-500' : ''}`}
+            >
+              Login
+            </Link>
+         
+          </li>
+          <li>
+          <Link
+              to="/signup"
+              className={`hover:text-gray-400 ${location.pathname === '/signup' ? 'text-red-500' : ''}`}
+            >
+              Sign Up
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/cart"
               className={`flex items-center hover:text-gray-400 ${location.pathname === '/cart' ? 'text-red-500' : ''}`}
             >
@@ -58,14 +83,9 @@ const Nav = ({count}) => {
            
             </Link>
           </li>
-          <li>
-            <Link
-              to="/admin"
-              className={`hover:text-gray-400 ${location.pathname === '/admin' ? 'text-red-500' : ''}`}
-            >
-              Admin
-            </Link>
-          </li>
+         
+           
+         
         </ul>
       </div>
 
